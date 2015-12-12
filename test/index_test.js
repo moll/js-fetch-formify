@@ -28,6 +28,30 @@ describe("FetchForm", function() {
     this.requests[0].requestBody.must.equal("name=Patrick%20Jane")
   })
 
+  it("must request with given Content-Type", function() {
+    var body = {name: "Patrick Jane"}
+    var type = "application/vnd.foo"
+    fetch(URL, {method: "POST", headers: {"Content-Type": type}, form: body})
+
+    this.requests[0].method.must.equal("POST")
+    this.requests[0].url.must.equal(URL)
+    this.requests[0].requestHeaders["content-type"].must.include(type)
+    this.requests[0].requestBody.must.equal("name=Patrick%20Jane")
+  })
+
+  // Even though it works right now, it depends on key insertion ordering.
+  // Not a particularly robust approach.
+  it("must request with given Content-Type if not capitalized", function() {
+    var body = {name: "Patrick Jane"}
+    var type = "application/vnd.foo"
+    fetch(URL, {method: "POST", headers: {"content-type": type}, form: body})
+
+    this.requests[0].method.must.equal("POST")
+    this.requests[0].url.must.equal(URL)
+    this.requests[0].requestHeaders["content-type"].must.include(type)
+    this.requests[0].requestBody.must.equal("name=Patrick%20Jane")
+  })
+
   it("must request with form if body given", function() {
     fetch(URL, {method: "POST", form: {name: "Patrick Jane"}, body: "Nope"})
 
