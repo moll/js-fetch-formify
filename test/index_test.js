@@ -1,6 +1,7 @@
 var Sinon = require("sinon")
 var Fetch = require("./fetch")
-var fetch = require("..")(Fetch)
+var FetchForm = require("..")
+var fetch = FetchForm(Fetch)
 var URL = "https://example.com/models"
 
 // Sinon appends charset to Content-Type:
@@ -86,5 +87,12 @@ describe("FetchForm", function() {
     res = yield res
     res.status.must.equal(200)
     ;(yield res.text()).must.equal("Hello")
+  })
+
+  it("must delete the form property", function() {
+    var spy = Sinon.spy(() => new Promise(() => {}))
+    FetchForm(spy)("/", {form: {}})
+    spy.callCount.must.equal(1)
+    spy.firstCall.args[1].must.not.have.property("form")
   })
 })

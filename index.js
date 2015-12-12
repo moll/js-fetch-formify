@@ -14,10 +14,13 @@ exports.fetch = function(fetch, url, opts) {
 }
 
 exports.stringify = function(url, opts) {
-  return defaults({
+  opts = defaults({
     headers: addContentType(opts.headers),
     body: Qs.stringify(opts.form)
   }, opts)
+
+  delete opts.form
+  return opts
 }
 
 function addContentType(headers) {
