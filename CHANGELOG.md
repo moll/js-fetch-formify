@@ -1,4 +1,4 @@
-## Unreleased
+## 0.2.0 (Dec 14, 2015)
 - Renames to FetchFormify.
 
 ## 0.1.338 (Dec 12, 2015)
