@@ -1,10 +1,10 @@
 {
-	"name": "@moll/fetch-form",
+	"name": "@moll/fetch-formify",
 	"version": "0.1.338",
 	"description": "",
 	"keywords": [],
-	"homepage": "https://github.com/moll/js-fetch-form",
-	"bugs": "https://github.com/moll/js-fetch-form/issues",
+	"homepage": "https://github.com/moll/js-fetch-formify",
+	"bugs": "https://github.com/moll/js-fetch-formify/issues",
 
 	"author": {
 		"name": "Andri Möll",
@@ -14,12 +14,12 @@
 
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/moll/js-fetch-form.git"
+		"url": "git://github.com/moll/js-fetch-formify.git"
 	},
 
 	"licenses": [{
 		"type": "LAGPL",
-		"url": "https://github.com/moll/js-fetch-form/blob/master/LICENSE"
+		"url": "https://github.com/moll/js-fetch-formify/blob/master/LICENSE"
 	}],
 
 	"main": "index.js",

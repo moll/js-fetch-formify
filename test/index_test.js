@@ -1,14 +1,14 @@
 var Sinon = require("sinon")
 var Fetch = require("./fetch")
-var FetchForm = require("..")
-var fetch = FetchForm(Fetch)
+var FetchFormify = require("..")
+var fetch = FetchFormify(Fetch)
 var URL = "https://example.com/models"
 
 // Sinon appends charset to Content-Type:
 // https://github.com/sinonjs/sinon/issues/607:
 var FORM_TYPE = /^application\/x-www-form-urlencoded\b/
 
-describe("FetchForm", function() {
+describe("FetchFormify", function() {
   beforeEach(function() {
     var xhr = global.XMLHttpRequest = Sinon.FakeXMLHttpRequest
     xhr.onCreate = Array.prototype.push.bind(this.requests = [])
@@ -91,7 +91,7 @@ describe("FetchForm", function() {
 
   it("must delete the form property", function() {
     var spy = Sinon.spy(() => new Promise(() => {}))
-    FetchForm(spy)("/", {form: {}})
+    FetchFormify(spy)("/", {form: {}})
     spy.callCount.must.equal(1)
     spy.firstCall.args[1].must.not.have.property("form")
   })

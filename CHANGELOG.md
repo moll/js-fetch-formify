@@ -1,3 +1,6 @@
+## Unreleased
+- Renames to FetchFormify.
+
 ## 0.1.338 (Dec 12, 2015)
 - Doesn't overwrite `Content-Type` if already set.
 - Deletes the `form` property before calling `fetch`.
