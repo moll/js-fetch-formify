@@ -1,10 +1,12 @@
 FetchFormify.js
 ===============
 [![NPM version][npm-badge]](https://www.npmjs.com/package/fetch-formify)
+[![Build status][travis-badge]](https://travis-ci.org/moll/js-fetch-formify)
 
 Fetch Formify is a mixin for the [Fetch API][fetch] for browsers and Node.js that urlencodes an object into a body and sets the `Content-Type` header to `application/x-www-form-urlencoded` if not given. It's functional and immutable, in that it doesn't modify any properties given to it.
 
 [npm-badge]: https://img.shields.io/npm/v/fetch-formify.svg
+[travis-badge]: https://travis-ci.org/moll/js-fetch-formify.png?branch=master
 [fetch]: https://developer.mozilla.org/en/docs/Web/API/Fetch_API
 
 
