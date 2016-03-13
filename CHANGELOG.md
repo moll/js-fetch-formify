@@ -1,3 +1,6 @@
+## 1.0.0 (Mar 13, 2016)
+- Public release for personal profit.
+
 ## 0.2.0 (Dec 14, 2015)
 - Renames to FetchFormify.
 

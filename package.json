@@ -1,6 +1,6 @@
 {
-	"name": "@moll/fetch-formify",
-	"version": "0.2.0",
+	"name": "fetch-formify",
+	"version": "1.0.0",
 	"description": "Fetch API mixin for urlencoding an object and setting Content-Type if unset. Functional and immutable.",
 	"keywords": [
 		"fetch",
