@@ -1,8 +1,12 @@
 {
 	"name": "@moll/fetch-formify",
 	"version": "0.2.0",
-	"description": "",
-	"keywords": [],
+	"description": "Fetch API mixin for urlencoding an object and setting Content-Type if unset. Functional and immutable.",
+	"keywords": [
+		"fetch",
+		"form",
+		"urlencode"
+	],
 	"homepage": "https://github.com/moll/js-fetch-formify",
 	"bugs": "https://github.com/moll/js-fetch-formify/issues",
 
