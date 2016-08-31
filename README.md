@@ -24,7 +24,7 @@ Using
 Wrap the native `fetch` function with the one from FetchFormify.js:
 
 ```javascript
-var fetchWithFormify = require("fetch-formify")(fetch)
+var fetch = require("fetch-formify")(global.fetch)
 ```
 
 Then pass any object you'd like urlencoded under the `form` property:
